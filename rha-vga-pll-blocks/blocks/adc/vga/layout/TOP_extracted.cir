@@ -1,0 +1,29 @@
+* Extracted by KLayout with GF180MCU LVS runset on : 12/07/2026 02:01
+
+* cell TOP
+* pin Bulk
+* pin Bulk2
+* pin Drain
+* pin Drain2
+* pin Gate
+* pin Gate2
+* pin Source
+* pin Source2
+* pin Source2
+.SUBCKT TOP Bulk Bulk2 Drain Drain2 Gate Gate2 Source Source2 Source2$1
+* device instance $1 r0 *1 12.92,0.44 nfet_03v3
+M$1 \$24 \$I3 \$23 Bulk nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P PS=2.1U
++ PD=2.1U
+* device instance $2 m90 *1 12.92,-1.27 nfet_03v3
+M$2 \$25 \$I4 \$24 Bulk nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P PS=2.1U
++ PD=2.1U
+* device instance $3 r0 *1 -1.05,2.12 nfet_03v3
+M$3 Drain Gate Source Bulk nfet_03v3 L=0.56U W=16U AS=5.56P AD=5.56P PS=22.78U
++ PD=22.78U
+* device instance $7 r0 *1 -0.12,-2.45 pfet_03v3
+M$7 Drain2 Gate2 Source2$1 Bulk2 pfet_03v3 L=0.28U W=0.42U AS=0.2822P
++ AD=0.1092P PS=2.18U PD=0.94U
+* device instance $8 r0 *1 0.68,-2.45 pfet_03v3
+M$8 Drain2 Gate2 Source2 Bulk2 pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.1092P
++ PS=2.18U PD=0.94U
+.ENDS TOP

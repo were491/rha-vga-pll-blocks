@@ -1,0 +1,18 @@
+* Extracted by KLayout with GF180MCU LVS runset on : 11/07/2026 18:42
+
+* cell untitled-4
+.SUBCKT untitled-4
+* cell instance $1 r0 *1 -0.45,0.12
+X$1 Drain Source Gate Bulk nfet
+.ENDS untitled-4
+
+* cell nfet
+* pin 
+* pin 
+* pin 
+* pin 
+.SUBCKT nfet \$1 \$2 \$3 \$5
+* device instance $1 r0 *1 0.33,0.21 nfet_03v3
+M$1 \$2 \$3 \$1 \$5 nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P PS=2.1U
++ PD=2.1U
+.ENDS nfet

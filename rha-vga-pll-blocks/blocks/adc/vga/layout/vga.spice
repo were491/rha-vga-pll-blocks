@@ -1,0 +1,101 @@
+** sch_path: /foss/designs/WaferSpace-GF180-June26/blocks/adc/vga/vga.sch
+.subckt vga VDD Vout Vcp_5 Vcp_4 Vin Vin_n Vcp_2 Vcp_3 Vcp_1 Vcp_0 GND Vout_n
+*.PININFO Vcp_0:I Vcp_1:I Vcp_2:I Vcp_3:I Vcp_4:I Vcp_5:I VDD:I Vin:I Vin_n:I Vout:O GND:I Vout_n:O
+M6 Vout_buf net1 Ibias GND nfet_03v3 L=0.56u W=16u nf=4
+M7 Vout_n_buf net2 Ibias GND nfet_03v3 L=0.56u W=16u nf=4
+M8 net1 Vin Ibias2 GND nfet_03v3 L=0.56u W=12u nf=3
+M10 net2 Vin_n Ibias2 GND nfet_03v3 L=0.56u W=12u nf=3
+XR16 net3 Vcp GND ppolyf_u r_width=1e-6 r_length=1e-6
+XR21 net4 net3 GND ppolyf_u r_width=1e-6 r_length=1e-6
+XR23 net5 net4 GND ppolyf_u r_width=1e-6 r_length=1e-6
+XR24 net18 net4 GND ppolyf_u r_width=1e-6 r_length=1e-6
+XR25 net6 net5 GND ppolyf_u r_width=1e-6 r_length=1e-6
+XR26 net19 net5 GND ppolyf_u r_width=1e-6 r_length=1e-6
+XR27 net7 net6 GND ppolyf_u r_width=1e-6 r_length=1e-6
+XR28 net20 net6 GND ppolyf_u r_width=1e-6 r_length=1e-6
+XR29 net8 net7 GND ppolyf_u r_width=1e-6 r_length=1e-6
+XR30 net21 net7 GND ppolyf_u r_width=1e-6 r_length=1e-6
+XR31 net9 net8 GND ppolyf_u r_width=1e-6 r_length=1e-6
+XR32 net22 net8 GND ppolyf_u r_width=1e-6 r_length=1e-6
+XR33 net23 net9 GND ppolyf_u r_width=1e-6 r_length=1e-6
+XR34 net24 net9 GND ppolyf_u r_width=1e-6 r_length=1e-6
+M13 Vout_buf Vcp net1 VDD pfet_03v3 L=0.56u W=12u nf=3
+M14 Vout_n_buf Vcp net2 VDD pfet_03v3 L=0.56u W=12u nf=3
+XR8 VDD net1 GND ppolyf_u_1k r_width=1e-6 r_length=3e-6
+XR10 VDD net2 GND ppolyf_u_1k r_width=1e-6 r_length=3e-6
+XC4 net1 Vout_n_buf cap_nmos_03v3 c_width=1u c_length=2u
+XC1 net2 Vout_buf cap_nmos_03v3 c_width=1u c_length=2u
+M3 Vbn Vbp VDD VDD pfet_03v3 L=0.56u W=12u nf=3
+M4 Vbp Vbp VDD VDD pfet_03v3 L=0.56u W=12u nf=3
+M5 Vbn Vbn GND GND nfet_03v3 L=0.56u W=4u nf=1
+M9 Vbp Vbn net25 GND nfet_03v3 L=0.56u W=16u nf=4
+M12 net10 net10 VDD VDD pfet_03v3 L=28u W=4u nf=1
+M15 net10 Vbn GND GND nfet_03v3 L=0.56u W=4u nf=1
+M16 Vbp net10 Vbn GND nfet_03v3 L=0.28u W=4u nf=1
+XR12 net25 GND GND ppolyf_u_1k r_width=1e-6 r_length=2e-6
+M17 Ibias Vbn GND GND nfet_03v3 L=0.56u W=32u nf=8 m=2
+M18 Ibias2 Vbn GND GND nfet_03v3 L=0.56u W=12u nf=3 m=2
+M22 Ibias3 Vbn GND GND nfet_03v3 L=0.56u W=32u nf=8 m=2
+M23 Ibias4 Vbn GND GND nfet_03v3 L=0.56u W=12u nf=3 m=2
+M29 Vout_buf net11 VDD VDD pfet_03v3 L=0.56u W=32u nf=8
+M30 Vout_n_buf net11 VDD VDD pfet_03v3 L=0.56u W=32u nf=8
+XR5 net11 Vout_buf GND ppolyf_u_1k r_width=1e-6 r_length=9e-6
+XR6 net11 Vout_n_buf GND ppolyf_u_1k r_width=1e-6 r_length=9e-6
+XR3 net1 net26 GND ppolyf_u_1k r_width=1e-6 r_length=3e-6
+XR4 net26 Vout_buf GND ppolyf_u_1k r_width=1e-6 r_length=3e-6
+XR9 net2 net27 GND ppolyf_u_1k r_width=1e-6 r_length=3e-6
+XR37 net27 Vout_n_buf GND ppolyf_u_1k r_width=1e-6 r_length=3e-6
+M21 Vout_buf2 net12 Ibias3 GND nfet_03v3 L=0.56u W=16u nf=4
+M24 Vout_n_buf2 net13 Ibias3 GND nfet_03v3 L=0.56u W=16u nf=4
+M25 net12 Vout_buf Ibias4 GND nfet_03v3 L=0.56u W=8u nf=2
+M26 net13 Vout_n_buf Ibias4 GND nfet_03v3 L=0.56u W=8u nf=2
+M27 Vout_buf2 Vcp net12 VDD pfet_03v3 L=0.56u W=12u nf=3
+M28 Vout_n_buf2 Vcp net13 VDD pfet_03v3 L=0.56u W=12u nf=3
+XR15 VDD net12 GND ppolyf_u_1k r_width=1e-6 r_length=3e-6
+XR17 VDD net13 GND ppolyf_u_1k r_width=1e-6 r_length=3e-6
+XC3 net12 Vout_n_buf2 cap_nmos_03v3 c_width=1u c_length=2u
+XC5 net13 Vout_buf2 cap_nmos_03v3 c_width=1u c_length=2u
+M45 Vout_buf2 net14 VDD VDD pfet_03v3 L=0.56u W=32u nf=8
+M46 Vout_n_buf2 net14 VDD VDD pfet_03v3 L=0.56u W=32u nf=8
+XR35 net14 Vout_buf2 GND ppolyf_u_1k r_width=1e-6 r_length=9e-6
+XR36 net14 Vout_n_buf2 GND ppolyf_u_1k r_width=1e-6 r_length=9e-6
+XR38 net12 net28 GND ppolyf_u_1k r_width=1e-6 r_length=3e-6
+XR39 net28 Vout_buf2 GND ppolyf_u_1k r_width=1e-6 r_length=3e-6
+XR40 net13 net29 GND ppolyf_u_1k r_width=1e-6 r_length=3e-6
+XR41 net29 Vout_n_buf2 GND ppolyf_u_1k r_width=1e-6 r_length=3e-6
+M31 Vout net15 Ibias5 GND nfet_03v3 L=0.56u W=16u nf=4
+M32 Vout_n net16 Ibias5 GND nfet_03v3 L=0.56u W=16u nf=4
+M33 net15 Vout_buf2 Ibias6 GND nfet_03v3 L=0.56u W=12u nf=3
+M34 net16 Vout_n_buf2 Ibias6 GND nfet_03v3 L=0.56u W=12u nf=3
+M35 Vout Vcp net15 VDD pfet_03v3 L=0.56u W=12u nf=3
+M47 Vout_n Vcp net16 VDD pfet_03v3 L=0.56u W=12u nf=3
+XR42 VDD net15 GND ppolyf_u_1k r_width=1e-6 r_length=3e-6
+XR43 VDD net16 GND ppolyf_u_1k r_width=1e-6 r_length=3e-6
+XC6 net15 Vout_n cap_nmos_03v3 c_width=1u c_length=2u
+XC7 net16 Vout cap_nmos_03v3 c_width=1u c_length=2u
+M48 Vout net17 VDD VDD pfet_03v3 L=0.56u W=32u nf=8
+M49 Vout_n net17 VDD VDD pfet_03v3 L=0.56u W=32u nf=8
+XR47 net17 Vout GND ppolyf_u_1k r_width=1e-6 r_length=9e-6
+XR48 net17 Vout_n GND ppolyf_u_1k r_width=1e-6 r_length=9e-6
+XR49 net15 net30 GND ppolyf_u_1k r_width=1e-6 r_length=3e-6
+XR50 net30 Vout GND ppolyf_u_1k r_width=1e-6 r_length=3e-6
+XR51 net16 net31 GND ppolyf_u_1k r_width=1e-6 r_length=3e-6
+XR52 net31 Vout_n GND ppolyf_u_1k r_width=1e-6 r_length=3e-6
+M50 Ibias5 Vbn GND GND nfet_03v3 L=0.56u W=32u nf=8 m=2
+M51 Ibias6 Vbn GND GND nfet_03v3 L=0.56u W=12u nf=3 m=2
+M56 net12 Vf_n Ibias4 GND nfet_03v3 L=0.56u W=4u nf=1
+M57 net13 Vf Ibias4 GND nfet_03v3 L=0.56u W=4u nf=1
+XC8 Vf_n GND cap_nmos_03v3 c_width=3e-6 c_length=3e-6
+XC9 Vf GND cap_nmos_03v3 c_width=3e-6 c_length=3e-6
+XR7 GND net23 GND ppolyf_u r_width=1e-6 r_length=1e-6
+XR11 Vcp_3 net20 GND ppolyf_u r_width=1e-6 r_length=1e-6
+XR45 Vcp_2 net21 GND ppolyf_u r_width=1e-6 r_length=1e-6
+XR53 Vcp_1 net22 GND ppolyf_u r_width=1e-6 r_length=1e-6
+XR54 Vcp_0 net24 GND ppolyf_u r_width=1e-6 r_length=1e-6
+XR20 Vcp_5 net18 GND ppolyf_u r_width=1e-6 r_length=1e-6
+XR22 Vcp_4 net19 GND ppolyf_u r_width=1e-6 r_length=1e-6
+M1 Vf_n Vf_n Vout_n Vf_n pfet_03v3 L=0.28u W=0.44u nf=1
+M2 Vf Vf Vout Vf pfet_03v3 L=0.28u W=0.44u nf=1
+.ends
+.GLOBAL GND
+

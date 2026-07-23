@@ -1,0 +1,261 @@
+* Extracted by KLayout with GF180MCU LVS runset on : 13/07/2026 00:29
+
+* cell vga
+* pin GND,VSS
+* pin VDD
+* pin VSS
+* pin Vcp_0
+* pin Vcp_1
+* pin Vcp_2
+* pin Vcp_3
+* pin Vcp_4
+* pin Vcp_5
+* pin Vin
+* pin Vin_n
+* pin Vout_buf
+* pin Vout_buf2
+* pin Vout_n_buf
+* pin Vout_n_buf2
+.SUBCKT vga GND|VSS VDD VSS Vcp_0 Vcp_1 Vcp_2 Vcp_3 Vcp_4 Vcp_5 Vin Vin_n
++ Vout_buf Vout_buf2 Vout_n_buf Vout_n_buf2
+* device instance $1 m0 *1 55.62,32.83 ppolyf_u_1k
+R$1 \$21 GND|VSS GND|VSS 2000 ppolyf_u_1k L=2U W=1U
+* device instance $2 m90 *1 56.26,36.69 nfet_03v3
+M$2 GND|VSS \$1 \$1 GND|VSS nfet_03v3 L=0.56U W=4U AS=2.44P AD=2.44P PS=9.22U
++ PD=9.22U
+* device instance $3 r0 *1 58.64,36.69 nfet_03v3
+M$3 \$1 \$25 \$32 GND|VSS nfet_03v3 L=0.28U W=4U AS=2.44P AD=2.44P PS=9.22U
++ PD=9.22U
+* device instance $4 r0 *1 50.24,36.69 nfet_03v3
+M$4 \$32 \$1 \$21 GND|VSS nfet_03v3 L=0.56U W=16U AS=5.56P AD=5.56P PS=22.78U
++ PD=22.78U
+* device instance $8 r270 *1 63.06,51.96 pfet_03v3
+M$8 \$25 \$25 VDD VDD pfet_03v3 L=28U W=4U AS=2.6P AD=2.6P PS=9.3U PD=9.3U
+* device instance $9 r90 *1 48.12,53.79 ppolyf_u
+R$9 \$40 \$7 GND|VSS 700 ppolyf_u L=2U W=1U
+* device instance $11 r90 *1 50.12,58.19 ppolyf_u
+R$11 \$40 \$46 GND|VSS 350 ppolyf_u L=1U W=1U
+* device instance $12 r90 *1 48.12,58.19 ppolyf_u
+R$12 \$40 Vcp_5 GND|VSS 700 ppolyf_u L=2U W=1U
+* device instance $13 m45 *1 52.12,53.79 ppolyf_u
+R$13 GND|VSS \$47 GND|VSS 700 ppolyf_u L=2U W=1U
+* device instance $15 m45 *1 54.12,53.79 ppolyf_u
+R$15 \$I82 VSS GND|VSS 350 ppolyf_u L=1U W=1U
+* device instance $16 r90 *1 48.12,62.59 ppolyf_u
+R$16 \$46 Vcp_4 GND|VSS 700 ppolyf_u L=2U W=1U
+* device instance $17 r90 *1 50.12,62.59 ppolyf_u
+R$17 \$46 \$54 GND|VSS 350 ppolyf_u L=1U W=1U
+* device instance $18 m45 *1 54.12,58.19 ppolyf_u
+R$18 Vcp_0 \$47 GND|VSS 700 ppolyf_u L=2U W=1U
+* device instance $19 m45 *1 52.12,62.59 ppolyf_u
+R$19 \$47 \$55 GND|VSS 350 ppolyf_u L=1U W=1U
+* device instance $22 r90 *1 48.12,66.99 ppolyf_u
+R$22 \$54 Vcp_3 GND|VSS 700 ppolyf_u L=2U W=1U
+* device instance $23 r90 *1 50.12,66.99 ppolyf_u
+R$23 \$54 \$68 GND|VSS 350 ppolyf_u L=1U W=1U
+* device instance $24 m45 *1 54.12,62.59 ppolyf_u
+R$24 Vcp_1 \$55 GND|VSS 700 ppolyf_u L=2U W=1U
+* device instance $25 m45 *1 52.12,66.99 ppolyf_u
+R$25 \$55 \$68 GND|VSS 350 ppolyf_u L=1U W=1U
+* device instance $29 m45 *1 54.12,66.99 ppolyf_u
+R$29 Vcp_2 \$68 GND|VSS 700 ppolyf_u L=2U W=1U
+* device instance $31 m45 *1 44.12,53.79 ppolyf_u
+R$31 \$I95 \$I140 GND|VSS 350 ppolyf_u L=1U W=1U
+* device instance $32 r90 *1 46.12,53.79 ppolyf_u
+R$32 \$I71 \$I116 GND|VSS 350 ppolyf_u L=1U W=1U
+* device instance $33 r90 *1 46.12,71.39 ppolyf_u
+R$33 \$I68 \$I113 GND|VSS 350 ppolyf_u L=1U W=1U
+* device instance $34 r90 *1 50.12,71.39 ppolyf_u
+R$34 \$I74 \$I120 GND|VSS 350 ppolyf_u L=1U W=1U
+* device instance $35 r90 *1 48.12,71.39 ppolyf_u
+R$35 \$I75 \$I121 GND|VSS 350 ppolyf_u L=1U W=1U
+* device instance $36 m45 *1 44.12,62.59 ppolyf_u
+R$36 \$I76 \$I122 GND|VSS 350 ppolyf_u L=1U W=1U
+* device instance $37 m45 *1 44.12,58.19 ppolyf_u
+R$37 \$I77 \$I123 GND|VSS 350 ppolyf_u L=1U W=1U
+* device instance $38 m45 *1 58.12,58.19 ppolyf_u
+R$38 \$I78 \$I124 GND|VSS 350 ppolyf_u L=1U W=1U
+* device instance $39 m45 *1 44.12,71.39 ppolyf_u
+R$39 \$I79 \$I125 GND|VSS 350 ppolyf_u L=1U W=1U
+* device instance $40 m45 *1 44.12,66.99 ppolyf_u
+R$40 \$I80 \$I126 GND|VSS 350 ppolyf_u L=1U W=1U
+* device instance $41 m45 *1 56.12,53.79 ppolyf_u
+R$41 \$I83 \$I129 GND|VSS 350 ppolyf_u L=1U W=1U
+* device instance $42 m45 *1 54.12,71.39 ppolyf_u
+R$42 \$I85 \$I131 GND|VSS 350 ppolyf_u L=1U W=1U
+* device instance $43 m45 *1 52.12,71.39 ppolyf_u
+R$43 \$I86 \$I132 GND|VSS 350 ppolyf_u L=1U W=1U
+* device instance $44 m45 *1 58.12,53.79 ppolyf_u
+R$44 \$I87 \$I133 GND|VSS 350 ppolyf_u L=1U W=1U
+* device instance $45 m45 *1 58.12,71.39 ppolyf_u
+R$45 \$I88 \$I134 GND|VSS 350 ppolyf_u L=1U W=1U
+* device instance $46 m45 *1 56.12,71.39 ppolyf_u
+R$46 \$I98 \$I143 GND|VSS 350 ppolyf_u L=1U W=1U
+* device instance $47 m45 *1 58.12,62.59 ppolyf_u
+R$47 \$I99 \$I144 GND|VSS 350 ppolyf_u L=1U W=1U
+* device instance $48 m45 *1 58.12,66.99 ppolyf_u
+R$48 \$I100 \$I145 GND|VSS 350 ppolyf_u L=1U W=1U
+* device instance $49 r0 *1 20.355,-8.26 cap_nmos_03v3
+C$49 \$11 GND|VSS 3.96e-14 cap_nmos_03v3 A=9P P=12U
+* device instance $50 m90 *1 40.825,-8.26 cap_nmos_03v3
+C$50 \$12 GND|VSS 3.96e-14 cap_nmos_03v3 A=9P P=12U
+* device instance $51 m45 *1 55.61,40.95 pfet_03v3
+M$51 \$1 \$32 VDD VDD pfet_03v3 L=0.56U W=12U AS=4.68P AD=4.68P PS=18.34U
++ PD=18.34U
+* device instance $54 r90 *1 50.73,40.95 pfet_03v3
+M$54 \$32 \$32 VDD VDD pfet_03v3 L=0.56U W=12U AS=4.68P AD=4.68P PS=18.34U
++ PD=18.34U
+* device instance $57 m135 *1 63.06,34.55 nfet_03v3
+M$57 GND|VSS \$1 \$25 GND|VSS nfet_03v3 L=0.56U W=4U AS=2.44P AD=2.44P PS=9.22U
++ PD=9.22U
+* device instance $58 m90 *1 21.68,-3.6 pfet_03v3
+M$58 \$11 \$11 \$5 \$11 pfet_03v3 L=0.28U W=0.44U AS=0.286P AD=0.286P PS=2.18U
++ PD=2.18U
+* device instance $59 r0 *1 39.5,-3.6 pfet_03v3
+M$59 \$12 \$12 \$6 \$12 pfet_03v3 L=0.28U W=0.44U AS=0.286P AD=0.286P PS=2.18U
++ PD=2.18U
+* device instance $60 m135 *1 43.6,-21.28 cap_nmos_03v3
+C$60 \$I210 \$5 8.8e-15 cap_nmos_03v3 A=2P P=6U
+* device instance $61 r270 *1 17.58,-21.28 cap_nmos_03v3
+C$61 \$I213 \$6 8.8e-15 cap_nmos_03v3 A=2P P=6U
+* device instance $62 m135 *1 43.6,12.85 cap_nmos_03v3
+C$62 \$I217 Vout_n_buf2 8.8e-15 cap_nmos_03v3 A=2P P=6U
+* device instance $63 r270 *1 17.58,12.85 cap_nmos_03v3
+C$63 \$I220 Vout_buf2 8.8e-15 cap_nmos_03v3 A=2P P=6U
+* device instance $64 m135 *1 43.6,46.98 cap_nmos_03v3
+C$64 \$I224 Vout_buf 8.8e-15 cap_nmos_03v3 A=2P P=6U
+* device instance $65 r270 *1 17.58,46.98 cap_nmos_03v3
+C$65 \$I227 Vout_n_buf 8.8e-15 cap_nmos_03v3 A=2P P=6U
+* device instance $66 m0 *1 25.96,-18.77 nfet_03v3
+M$66 \$5 \$I213 \$I211 GND|VSS nfet_03v3 L=0.56U W=16U AS=5.56P AD=5.56P
++ PS=22.78U PD=22.78U
+* device instance $70 r180 *1 35.22,-18.77 nfet_03v3
+M$70 \$6 \$I210 \$I211 GND|VSS nfet_03v3 L=0.56U W=16U AS=5.56P AD=5.56P
++ PS=22.78U PD=22.78U
+* device instance $74 m0 *1 25.96,15.36 nfet_03v3
+M$74 Vout_n_buf2 \$I220 \$I218 GND|VSS nfet_03v3 L=0.56U W=16U AS=5.56P
++ AD=5.56P PS=22.78U PD=22.78U
+* device instance $78 r180 *1 35.22,15.36 nfet_03v3
+M$78 Vout_buf2 \$I217 \$I218 GND|VSS nfet_03v3 L=0.56U W=16U AS=5.56P AD=5.56P
++ PS=22.78U PD=22.78U
+* device instance $82 m0 *1 25.96,49.49 nfet_03v3
+M$82 Vout_buf \$I227 \$I225 GND|VSS nfet_03v3 L=0.56U W=16U AS=5.56P AD=5.56P
++ PS=22.78U PD=22.78U
+* device instance $86 r180 *1 35.22,49.49 nfet_03v3
+M$86 Vout_n_buf \$I224 \$I225 GND|VSS nfet_03v3 L=0.56U W=16U AS=5.56P AD=5.56P
++ PS=22.78U PD=22.78U
+* device instance $90 r0 *1 22.02,-22.41 ppolyf_u_1k
+R$90 \$I213 \$5 GND|VSS 6000 ppolyf_u_1k L=6U W=1U
+* device instance $91 m90 *1 39.16,-22.41 ppolyf_u_1k
+R$91 \$I210 \$6 GND|VSS 6000 ppolyf_u_1k L=6U W=1U
+* device instance $92 m90 *1 39.16,-25.93 ppolyf_u_1k
+R$92 VDD \$I210 GND|VSS 3000 ppolyf_u_1k L=3U W=1U
+* device instance $95 r0 *1 22.02,-25.93 ppolyf_u_1k
+R$95 VDD \$I213 GND|VSS 3000 ppolyf_u_1k L=3U W=1U
+* device instance $96 r0 *1 22.02,11.72 ppolyf_u_1k
+R$96 \$I220 Vout_n_buf2 GND|VSS 6000 ppolyf_u_1k L=6U W=1U
+* device instance $97 m90 *1 39.16,11.72 ppolyf_u_1k
+R$97 \$I217 Vout_buf2 GND|VSS 6000 ppolyf_u_1k L=6U W=1U
+* device instance $98 m90 *1 39.16,8.2 ppolyf_u_1k
+R$98 VDD \$I217 GND|VSS 3000 ppolyf_u_1k L=3U W=1U
+* device instance $101 r0 *1 22.02,8.2 ppolyf_u_1k
+R$101 VDD \$I220 GND|VSS 3000 ppolyf_u_1k L=3U W=1U
+* device instance $102 r0 *1 22.02,45.85 ppolyf_u_1k
+R$102 \$I227 Vout_buf GND|VSS 6000 ppolyf_u_1k L=6U W=1U
+* device instance $103 m90 *1 39.16,45.85 ppolyf_u_1k
+R$103 \$I224 Vout_n_buf GND|VSS 6000 ppolyf_u_1k L=6U W=1U
+* device instance $104 m90 *1 39.16,42.33 ppolyf_u_1k
+R$104 VDD \$I224 GND|VSS 3000 ppolyf_u_1k L=3U W=1U
+* device instance $107 r0 *1 22.02,42.33 ppolyf_u_1k
+R$107 VDD \$I227 GND|VSS 3000 ppolyf_u_1k L=3U W=1U
+* device instance $108 m135 *1 27.7,-22.55 nfet_03v3
+M$108 \$I211 \$1 GND|VSS GND|VSS nfet_03v3 L=0.56U W=64U AS=19.44P AD=19.44P
++ PS=81.72U PD=81.72U
+* device instance $124 m135 *1 27.7,11.58 nfet_03v3
+M$124 \$I218 \$1 GND|VSS GND|VSS nfet_03v3 L=0.56U W=64U AS=19.44P AD=19.44P
++ PS=81.72U PD=81.72U
+* device instance $140 m135 *1 27.7,45.71 nfet_03v3
+M$140 \$I225 \$1 GND|VSS GND|VSS nfet_03v3 L=0.56U W=64U AS=19.44P AD=19.44P
++ PS=81.72U PD=81.72U
+* device instance $156 r0 *1 25.63,-14.89 ppolyf_u_1k
+R$156 \$5 \$I212 GND|VSS 9000 ppolyf_u_1k L=9U W=1U
+* device instance $157 r180 *1 35.55,-14.89 ppolyf_u_1k
+R$157 \$6 \$I212 GND|VSS 9000 ppolyf_u_1k L=9U W=1U
+* device instance $158 r0 *1 25.63,19.24 ppolyf_u_1k
+R$158 Vout_n_buf2 \$I219 GND|VSS 9000 ppolyf_u_1k L=9U W=1U
+* device instance $159 r180 *1 35.55,19.24 ppolyf_u_1k
+R$159 Vout_buf2 \$I219 GND|VSS 9000 ppolyf_u_1k L=9U W=1U
+* device instance $160 r0 *1 25.63,53.37 ppolyf_u_1k
+R$160 Vout_buf \$I226 GND|VSS 9000 ppolyf_u_1k L=9U W=1U
+* device instance $161 r180 *1 35.55,53.37 ppolyf_u_1k
+R$161 Vout_n_buf \$I226 GND|VSS 9000 ppolyf_u_1k L=9U W=1U
+* device instance $162 r90 *1 33.08,-12.37 pfet_03v3
+M$162 \$6 \$I212 VDD VDD pfet_03v3 L=0.56U W=32U AS=9.88P AD=9.88P PS=40.94U
++ PD=40.94U
+* device instance $170 r90 *1 33.08,21.76 pfet_03v3
+M$170 Vout_buf2 \$I219 VDD VDD pfet_03v3 L=0.56U W=32U AS=9.88P AD=9.88P
++ PS=40.94U PD=40.94U
+* device instance $178 r90 *1 33.08,55.89 pfet_03v3
+M$178 Vout_n_buf \$I226 VDD VDD pfet_03v3 L=0.56U W=32U AS=9.88P AD=9.88P
++ PS=40.94U PD=40.94U
+* device instance $186 r180 *1 23.02,-18.77 pfet_03v3
+M$186 \$I213 \$7 \$5 VDD pfet_03v3 L=0.56U W=12U AS=4.68P AD=4.68P PS=18.34U
++ PD=18.34U
+* device instance $189 m0 *1 38.16,-18.77 pfet_03v3
+M$189 \$I210 \$7 \$6 VDD pfet_03v3 L=0.56U W=12U AS=4.68P AD=4.68P PS=18.34U
++ PD=18.34U
+* device instance $192 r180 *1 23.02,15.36 pfet_03v3
+M$192 \$I220 \$7 Vout_n_buf2 VDD pfet_03v3 L=0.56U W=12U AS=4.68P AD=4.68P
++ PS=18.34U PD=18.34U
+* device instance $195 m0 *1 38.16,15.36 pfet_03v3
+M$195 \$I217 \$7 Vout_buf2 VDD pfet_03v3 L=0.56U W=12U AS=4.68P AD=4.68P
++ PS=18.34U PD=18.34U
+* device instance $198 r180 *1 23.02,49.49 pfet_03v3
+M$198 \$I227 \$7 Vout_buf VDD pfet_03v3 L=0.56U W=12U AS=4.68P AD=4.68P
++ PS=18.34U PD=18.34U
+* device instance $201 m0 *1 38.16,49.49 pfet_03v3
+M$201 \$I224 \$7 Vout_n_buf VDD pfet_03v3 L=0.56U W=12U AS=4.68P AD=4.68P
++ PS=18.34U PD=18.34U
+* device instance $204 r90 *1 28.1,-12.37 pfet_03v3
+M$204 \$5 \$I212 VDD VDD pfet_03v3 L=0.56U W=32U AS=9.88P AD=9.88P PS=40.94U
++ PD=40.94U
+* device instance $212 r90 *1 28.1,21.76 pfet_03v3
+M$212 Vout_n_buf2 \$I219 VDD VDD pfet_03v3 L=0.56U W=32U AS=9.88P AD=9.88P
++ PS=40.94U PD=40.94U
+* device instance $220 r90 *1 28.1,55.89 pfet_03v3
+M$220 Vout_buf \$I226 VDD VDD pfet_03v3 L=0.56U W=32U AS=9.88P AD=9.88P
++ PS=40.94U PD=40.94U
+* device instance $228 m45 *1 33.48,-35.05 nfet_03v3
+M$228 \$I209 \$1 GND|VSS GND|VSS nfet_03v3 L=0.56U W=24U AS=9.04P AD=9.04P
++ PS=36.52U PD=36.52U
+* device instance $234 m45 *1 33.48,-0.92 nfet_03v3
+M$234 \$I216 \$1 GND|VSS GND|VSS nfet_03v3 L=0.56U W=24U AS=9.04P AD=9.04P
++ PS=36.52U PD=36.52U
+* device instance $240 m45 *1 33.48,33.21 nfet_03v3
+M$240 \$I223 \$1 GND|VSS GND|VSS nfet_03v3 L=0.56U W=24U AS=9.04P AD=9.04P
++ PS=36.52U PD=36.52U
+* device instance $246 r90 *1 22.07,-30.94 nfet_03v3
+M$246 \$I213 Vout_buf2 \$I209 GND|VSS nfet_03v3 L=0.56U W=12U AS=4.52P AD=4.52P
++ PS=18.26U PD=18.26U
+* device instance $249 m45 *1 39.11,-30.94 nfet_03v3
+M$249 \$I210 Vout_n_buf2 \$I209 GND|VSS nfet_03v3 L=0.56U W=12U AS=4.52P
++ AD=4.52P PS=18.26U PD=18.26U
+* device instance $252 r90 *1 22.07,3.19 nfet_03v3
+M$252 \$I220 \$11 \$I216 GND|VSS nfet_03v3 L=0.56U W=4U AS=2.44P AD=1.04P
++ PS=9.22U PD=4.52U
+* device instance $253 r90 *1 22.07,4.27 nfet_03v3
+M$253 \$I216 Vout_n_buf \$I220 GND|VSS nfet_03v3 L=0.56U W=8U AS=2.08P AD=3.48P
++ PS=9.04U PD=13.74U
+* device instance $255 m45 *1 39.11,3.19 nfet_03v3
+M$255 \$I217 \$12 \$I216 GND|VSS nfet_03v3 L=0.56U W=4U AS=2.44P AD=1.04P
++ PS=9.22U PD=4.52U
+* device instance $256 m45 *1 39.11,4.27 nfet_03v3
+M$256 \$I216 Vout_buf \$I217 GND|VSS nfet_03v3 L=0.56U W=8U AS=2.08P AD=3.48P
++ PS=9.04U PD=13.74U
+* device instance $258 r90 *1 22.07,37.32 nfet_03v3
+M$258 \$I227 Vin \$I223 GND|VSS nfet_03v3 L=0.56U W=12U AS=4.52P AD=4.52P
++ PS=18.26U PD=18.26U
+* device instance $261 m45 *1 39.11,37.32 nfet_03v3
+M$261 \$I224 Vin_n \$I223 GND|VSS nfet_03v3 L=0.56U W=12U AS=4.52P AD=4.52P
++ PS=18.26U PD=18.26U
+.ENDS vga

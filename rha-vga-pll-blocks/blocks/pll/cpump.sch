@@ -1,0 +1,69 @@
+v {xschem version=3.4.8RC file_version=1.3}
+G {}
+K {}
+V {}
+S {}
+F {}
+E {}
+N 270 -380 270 -340 {lab=Iref_pos}
+N 150 -310 230 -310 {lab=V_up}
+N 270 -280 270 -240 {lab=V_out}
+N 270 -260 400 -260 {lab=V_out}
+N 270 -210 380 -210 {lab=VSS}
+N 270 -310 340 -310 {lab=VDD}
+N 150 -210 230 -210 {lab=V_down}
+N 270 -180 270 -140 {lab=Iref_neg}
+N 380 -230 380 -140 {lab=VSS}
+N 380 -140 400 -140 {lab=VSS}
+N 400 -260 590 -260 {lab=V_out}
+N 400 -140 530 -140 {lab=VSS}
+C {ipin.sym} 270 -380 0 0 {name=p1 lab=Iref_pos}
+C {ipin.sym} 270 -140 0 0 {name=p2 lab=Iref_neg}
+C {ipin.sym} 150 -310 0 0 {name=p3 lab=V_up}
+C {ipin.sym} 150 -210 0 0 {name=p4 lab=V_down}
+C {symbols/nfet_03v3.sym} 250 -210 0 0 {name=M2
+L=0.56u
+W=19.2u
+nf=4
+m=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=nfet_03v3
+spiceprefix=X
+}
+C {iopin.sym} 340 -310 0 0 {name=p6 lab=VDD}
+C {iopin.sym} 380 -140 1 0 {name=p7 lab=VSS}
+C {opin.sym} 590 -260 0 0 {name=p8 lab=V_out}
+C {symbols/ppolyf_u_1k.sym} 400 -230 0 0 {name=R1
+W=2e-6
+L=32e-6
+model=ppolyf_u_1k
+spiceprefix=X
+m=1
+spice_ignore=false}
+C {symbols/pfet_03v3.sym} 250 -310 0 0 {name=M1
+L=0.56u
+W=19.2u
+nf=4
+m=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=pfet_03v3
+spiceprefix=X
+spice_ignore=false
+}
+C {symbols/cap_mim_analog.sym} 400 -170 0 0 {name=C2
+W=35e-6
+L=35e-6
+model=cap_mim_2f0_m4m5_noshield
+spiceprefix=X
+m=1
+spice_ignore=false}
